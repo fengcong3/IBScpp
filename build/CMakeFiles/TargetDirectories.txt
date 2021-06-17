@@ -1,0 +1,3 @@
+/public/agis/chengshifeng_group/fengcong/WGRS/software/Fc-code/IBScpp/build/CMakeFiles/rebuild_cache.dir
+/public/agis/chengshifeng_group/fengcong/WGRS/software/Fc-code/IBScpp/build/CMakeFiles/IBScpp.dir
+/public/agis/chengshifeng_group/fengcong/WGRS/software/Fc-code/IBScpp/build/CMakeFiles/edit_cache.dir

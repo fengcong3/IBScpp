@@ -1,0 +1,114 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/public/home/fengcong/anaconda2/include",
+						"/public/agis/chengshifeng_group/fengcong/WGRS/software/masurca/MaSuRCA-3.3.5/tmp/boost_1_74_0/boost",
+						"/public/agis/chengshifeng_group/fuyuan/pip-fuyuan/app/openssl/include",
+						"/usr/include",
+						"/public/agis/chengshifeng_group/fuyuan/pip-fuyuan/usr/include",
+						"/public/home/fengcong/anaconda2/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include",
+						"/public/home/fengcong/anaconda2/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include-fixed",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/include",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/sysroot/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/public/home/fengcong/anaconda2/lib",
+						"/public/home/fengcong/anaconda2/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0",
+						"/public/home/fengcong/anaconda2/lib/gcc",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/lib",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/sysroot/lib",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"gcc",
+						"gcc_s",
+						"c",
+						"gcc",
+						"gcc_s"
+					]
+				},
+				"path" : "/public/home/fengcong/anaconda2/bin/x86_64-conda_cos6-linux-gnu-cc",
+				"version" : "7.3.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"/public/home/fengcong/anaconda2/include",
+						"/public/agis/chengshifeng_group/fengcong/WGRS/software/masurca/MaSuRCA-3.3.5/tmp/boost_1_74_0/boost",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/include/c++/7.3.0",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/include/c++/7.3.0/x86_64-conda_cos6-linux-gnu",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/include/c++/7.3.0/backward",
+						"/public/home/fengcong/anaconda2/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include",
+						"/public/home/fengcong/anaconda2/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0/include-fixed",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/include",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/sysroot/usr/include"
+					],
+					"linkDirectories" : 
+					[
+						"/public/home/fengcong/anaconda2/lib",
+						"/public/home/fengcong/anaconda2/lib/gcc/x86_64-conda_cos6-linux-gnu/7.3.0",
+						"/public/home/fengcong/anaconda2/lib/gcc",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/lib",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/sysroot/lib",
+						"/public/home/fengcong/anaconda2/x86_64-conda_cos6-linux-gnu/sysroot/usr/lib"
+					],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : 
+					[
+						"stdc++",
+						"m",
+						"gcc_s",
+						"gcc",
+						"c",
+						"gcc_s",
+						"gcc"
+					]
+				},
+				"path" : "/public/home/fengcong/anaconda2/bin/x86_64-conda_cos6-linux-gnu-c++",
+				"version" : "7.3.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
