@@ -1,0 +1,34 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/IBScpp",
+            "args": [
+                "-k" , "/vol3/agis/chengshifeng_group/fengcong/wheat_pop_analysis/48.kmer_IBS_region/zz.sh/Wheat_test/test.kmers_with_strand",
+                "-r" , "/vol3/agis/chengshifeng_group/fengcong/wheat_pop_analysis/48.kmer_IBS_region/zz.sh/Wheat_test/../../00.ref_data/Wheat_test.fa",
+                "-p" , "2",
+                "-s" , "31",
+                "-w","50"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}", //这是你的工作目录，可以根据需要调整
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "build debug", // 这是在调试之前需要执行的任务，需要跟task.json文件配合起来工作
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}
