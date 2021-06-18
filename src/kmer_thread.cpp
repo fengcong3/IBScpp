@@ -8,6 +8,10 @@
 //     vector<chromosome_inf> &chr_inf;
 // };
 
+/*
+2021-6-18 10:09:52
+author:fengcong@caa.cn
+*/
 
 #define KMER_SIZE 31
 vector<string> seq2kmers(string seq){
@@ -76,7 +80,6 @@ void * thread_func(void *threadarg){
             // }else{
             //     gap_size ++;
             // }
-            // cerr << "kmer go" <<endl;
             if ( find_kmer_db_vector(my_data->kmers, kmer2bits(kmers[i]),KMER_SIZE )){
                 (ret_data+count)->observed_kmers ++;
                 add_variation(ret_data+count,gap_size,KMER_SIZE);
