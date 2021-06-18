@@ -1,8 +1,11 @@
 #include<args.h>
-
+/*
+2021-6-18 10:09:52
+author:fengcong@caa.cn
+*/
 struct args_st deal_args(int argc, char* argv[]){
     //2021-6-16 12:09:54
-    cxxopts::Options options("IBScpp", "cpp version of IBSpy");
+    cxxopts::Options options("IBScpp", ",original repository:https://github.com/Uauy-Lab/IBSpy");
     try
 	{
 		options.add_options()

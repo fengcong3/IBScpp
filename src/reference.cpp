@@ -1,5 +1,10 @@
 #include<reference.h>
 #include <algorithm>
+/*
+2021-6-18 10:09:52
+author:fengcong@caa.cn
+*/
+
 vector<chromosome_inf> get_reference_inf(string reference){
     //2021-6-16 13:02:45
     vector<struct chromosome_inf> ref_inf;

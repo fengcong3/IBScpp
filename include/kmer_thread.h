@@ -17,6 +17,7 @@ struct thread_data{
     // KmerUint64Hash1 *kmers;
     vector<uint64_t> * kmers;
     // map<string,string> * ref;
+    // KmersSet * kmers;
 };
 
 struct result{

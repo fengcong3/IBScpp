@@ -1,5 +1,9 @@
 #include<IBScpp.h>
-
+/*
+2021-6-18 10:09:52
+author:fengcong@caa.cn
+This is the C / C ++ version of IBSpy, the original repository: https://github.com/Uauy-Lab/IBSpy
+*/
 
 
 int main(int argc, char* argv[]){
@@ -16,27 +20,23 @@ int main(int argc, char* argv[]){
     //deal reference file
     vector<chromosome_inf> chr_inf =  get_reference_inf(reference_file_path);
 
-    cerr << "11" <<endl;
 
     //get tasks list
     vector<window_info> tasks =  produce_tasks_via_refernce(chr_inf,window_size,kmer_size);
 
-    cerr << "22" <<endl;
 
-    //get reference map
+    //get reference map,this is an alternative.
+    //No significant speed improvement, increased memory usage.so discard
     // map<string, string> * ref = get_reference_map(reference_file_path);
 
-    // for (size_t i =0 ; i < tasks.size();i++){
-    //     cout<<tasks[i].chromosome << endl;
-    //     cout<<tasks[i].start << endl;
-    //     cout<<tasks[i].end << endl;
-        
-    // }
 
     //read kmers database
-    // KmerUint64Hash1* kmers =  read_kmer_db_hash(  kmer_db_path);  //method 1
-    vector<uint64_t> *kmers = read_kmer_db_vector(  kmer_db_path);   //method2
-
+    //method 1, slow in loading process,more mem usage.
+    // KmerUint64Hash1* kmers =  read_kmer_db_hash(  kmer_db_path);  
+    //method 2, slow in loading process
+    // KmersSet * kmers = load_kmer_raw_file2(kmer_db_path, 10000, false);
+    //method 3, low mem usage,more faster 
+    vector<uint64_t> *kmers = read_kmer_db_vector(  kmer_db_path);   
 
     //Assigning Tasks
     uint64_t tasks_num = tasks.size();
@@ -54,8 +54,7 @@ int main(int argc, char* argv[]){
 
     
 
-    ////每个线程的偏移量
-    
+    //calc task offset for each thread
     cerr<<"calc offset"<<endl;
     vector<uint64_t> job_offset(threads);
     job_offset[0]=0;
@@ -65,8 +64,8 @@ int main(int argc, char* argv[]){
         cerr << "\t" << job_offset[i]; //
     }
     cerr <<"\n"<<endl;
-    // 创建所有线程
 
+    // create the threads 
     cerr<<"create threads"<<endl;
     struct thread_data * td = (struct thread_data *)calloc(threads,sizeof(thread_data));
     pthread_t * tids=(pthread_t *)calloc(threads,sizeof(pthread_t));
